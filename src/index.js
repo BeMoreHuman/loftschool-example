@@ -13,10 +13,10 @@ function returnFnResult(fn) {
   return result;
 }
 
-function returnCounter(number) {
+function returnCounter(number = 0) {
   let num = number;
-  return function() {
-    return num++;
+  return function f() {
+    return ++num;
   }
 }
 // let f = returnCounter(10);
